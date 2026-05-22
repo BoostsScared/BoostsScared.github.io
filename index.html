@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boosts Scared — Наши социальные сети</title>
+    <title>Boosts Scared — Наши social media</title>
     <!-- Иконка сайта во вкладке браузера -->
     <link rel="icon" type="image/png" href="icon.png">
     
@@ -36,6 +36,7 @@
             justify-content: center;
             min-height: 100vh;
             padding: 20px;
+            position: relative; /* Нужно для правильного позиционирования копирайта */
         }
 
         /* Главный контейнер-визитка */
@@ -135,6 +136,40 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 20px rgba(37, 244, 238, 0.4);
         }
+
+        /* Фиксированная подпись в правом нижнем углу */
+        .copyright {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.9rem;
+            color: #626d7a;
+            letter-spacing: 1px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            user-select: none; /* Чтобы текст случайно не выделялся мышкой */
+        }
+
+        /* Небольшой интерактив при наведении на автора */
+        .copyright:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        /* Стили для мобильных устройств, чтобы текст не наезжал на карточку */
+        @media (max-width: 600px) {
+            .copyright {
+                position: static;
+                margin-top: 30px;
+                display: block;
+                text-align: center;
+            }
+            body {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -166,6 +201,9 @@
             </a>
         </div>
     </div>
+
+    <!-- Твой водяной знак -->
+    <div class="copyright">Made by Wolbes</div>
 
 </body>
 </html>
