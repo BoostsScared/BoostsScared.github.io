@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boosts Scared — Наши социальные сети</title>
+    <!-- Иконка сайта во вкладке браузера -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --neon-blue: #00f0ff;
+            --accent-color: #ff007f;
+            --white: #ffffff;
+            
+            /* Цвета соцсетей */
+            --discord-color: #5865F2;
+            --instagram-color: #E1306C;
+            --tiktok-color: #000000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Главный контейнер-визитка */
+        .profile-container {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 30px;
+            border-radius: 24px;
+            text-align: center;
+            border: 2px solid rgba(255, 0, 127, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 0, 127, 0.1);
+        }
+
+        /* Твоя аватарка из папки */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+
+        .description {
+            color: #8f9aa7;
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+        }
+
+        /* Список кнопок */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px; /* Расстояние между иконкой и текстом */
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        /* Стилизация SVG-иконок внутри кнопок */
+        .btn-social svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Стили для каждой кнопки */
+        .btn-social.discord {
+            background-color: var(--discord-color);
+        }
+        .btn-social.discord:hover {
+            background-color: #4351b5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(88, 101, 242, 0.4);
+        }
+
+        .btn-social.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .btn-social.instagram:hover {
+            opacity: 0.95;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(225, 48, 108, 0.4);
+        }
+
+        .btn-social.tiktok {
+            background-color: var(--tiktok-color);
+            border: 1px solid #25f4ee;
+        }
+        .btn-social.tiktok:hover {
+            background-color: #111;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(37, 244, 238, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Твой аватар -->
+        <img src="icon.png" alt="Boosts Scared Avatar" class="avatar">
+        
+        <h1>Boosts Scared</h1>
+        <p class="description">Contact us on social media</p>
+
+        <div class="social-links">
+            <!-- Кнопка Discord -->
+            <a href="https://discord.gg/aV8Jg8MX8" target="_blank" class="btn-social discord">
+                <svg viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.4-5c.87-.64,1.71-1.32,2.51-2a75.52,75.52,0,0,0,72.71,0c.8.71,1.64,1.39,2.51,2a68.21,68.21,0,0,1-10.4,5,77.3,77.3,0,0,0,6.63,10.85,105.32,105.32,0,0,0,31.05-18.83C129.87,50.77,123.63,28,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
+                Discord
+            </a>
+
+            <!-- Кнопка Instagram -->
+            <a href="https://www.instagram.com/ixc_rxzon?igsh=MWFhdDBwcnFsemtoNg==" target="_blank" class="btn-social instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Instagram
+            </a>
+
+            <!-- Кнопка TikTok -->
+            <a href="https://www.tiktok.com/@scared9250?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-social tiktok">
+                <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.63 4.15.96.98 2.28 1.52 3.65 1.66v3.78c-1.33-.1-2.63-.56-3.71-1.37-.56-.4-.14-.06-.68-.54v5.33c.04 3.44-1.89 6.81-5.18 7.96-2.9,1.06-6.38.38-8.54-1.79-2.48-2.39-2.71-6.49-.52-9.15 1.75-2.21 4.79-2.98 7.37-1.92v3.91c-1.43-.59-3.15-.17-4.11.99-.95 1.07-.94 2.84.05 3.86,1.07 1.13 2.97 1.19 4.1.13.73-.64.91-1.66.91-2.61V.02z"/></svg>
+                TikTok
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
